@@ -1,0 +1,66 @@
+@import url('https://fonts.google.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline:none;
+    border: none;
+    /* text-transform: capitalize; */
+    transition: all .2s linear;
+}
+html{
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+.profile-container{
+    width: 100%;
+    position: absolute;
+    right: 1.5%;
+    top: 23%;
+    left: 55%;
+}
+.profile-img{
+    width: 150px;
+    height: 150px;
+    clip-path: circle();
+    margin-right: 10px;
+}
+.profile-info-container{
+    display: flex;
+    /* align-items: center;
+   justify-content: center; */
+   margin-left: -80px;
+   flex-direction: column;
+   margin-top: 23px;
+}
+.info-items{
+    display: flex;
+    gap: 20px;
+}
+.profile-update-btn{
+    background-color: blue;
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+.profile-title{
+    font-size: 22px;
+}
+.profile-title-value{
+    font-size: 22px;
+}
+.profile-update-btn-container{
+    margin-top: 12px;
+}

@@ -1,0 +1,104 @@
+@import url('https://fonts.google.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline:none;
+    border: none;
+    transition: all .2s linear;
+}
+html{
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-container{
+box-shadow: var(--box-shadow);
+background-color: white;
+height: 65vh;
+width: 55.3%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin-top: 130px;
+border-radius: 10px;
+}
+.dropdown-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+    margin: 2%;
+    border-radius: 3px;
+}
+.input-field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+    border: 1px solid black;
+    margin: 2%;
+    border-radius: 3px;
+}
+.input{
+    padding: 10px;
+    outline: none;
+    border: none;
+    width: 275px;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.button{
+    padding: 10px;
+    outline: none;
+    border: none;
+    width: 275px;
+    border-radius: 3px;
+    background-color: var(--black);
+    color: white;
+    cursor: pointer;
+}
+.panel-bar{
+    background-color: var(--black);
+    height: 37px;
+    width: 45%;
+    position: absolute;
+    top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panel-title-text{
+    text-align: center;
+    color: white;
+}
+.copyright{
+    position: absolute;
+    top: 77%;
+    font-size: 11px;
+}
+.dropdown-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.dropdown{
+    padding: 10px;
+}

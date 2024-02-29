@@ -1,0 +1,54 @@
+@import url('https://fonts.google.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline:none;
+    border: none;
+    /* text-transform: capitalize; */
+    transition: all .2s linear;
+}
+html{
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+.boxes-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1ECC4F;
+    margin: 10px;
+    width: 140px;
+    height: 10vh;
+}
+.role-name,.role-value{
+    color: white;
+    margin: 1px;
+}
+.role-icon{
+    color: white;
+    margin: 1px;
+}
+.horizontal-line{
+    background-color: var(--black);
+    height: 3px;
+    width: 95%;
+}
+.footer-text-container{
+    margin-left: 25%;
+    margin-top: 0.5%;
+}
