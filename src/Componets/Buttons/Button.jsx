@@ -3,12 +3,12 @@ import "./style.css";
 import { Folder, Delete, Update, Add } from '@mui/icons-material';
 
 
-const Button = () => {
+const Button = ({ handleClickOpen,handleDelete, handleNavigate}) => {
   return (
     <div>
-        <button className='view-btn'><Folder/>View</button>
-        <button className='delete-btn'><Delete/>Delete</button>
-        <button className='update-btn'><Update/>Update</button>
+        <button className='view-btn' onClick={handleNavigate}><Folder/>View</button>
+        <button className='delete-btn' onClick={handleDelete}><Delete/>Delete</button>
+        <button className='update-btn' onClick={handleClickOpen}><Update/>Update</button>
     </div>
   )
 }

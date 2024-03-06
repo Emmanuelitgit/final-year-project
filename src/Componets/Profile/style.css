@@ -34,19 +34,21 @@ html{
     margin-right: 10px;
 }
 .profile-info-container{
-    display: flex;
-    /* align-items: center;
-   justify-content: center; */
-   margin-left: -80px;
+   display: flex;
+   margin-left: -40px;
    flex-direction: column;
-   margin-top: 23px;
+   margin-top: 25px;
+   gap: 25px;
 }
 .info-items{
     display: flex;
-    gap: 20px;
+    gap: 15px;
+}
+.profile-update-btn-container{
+    margin-top: 25px;
 }
 .profile-update-btn{
-    background-color: blue;
+    background-color:var(--black);
     padding: 8px;
     outline: none;
     border: none;
@@ -55,12 +57,18 @@ html{
     cursor: pointer;
     text-align: center;
 }
-.profile-title{
-    font-size: 22px;
+
+.profile-update-btn:focus{
+    border: none;
+    outline: none;
 }
+
 .profile-title-value{
-    font-size: 22px;
-}
-.profile-update-btn-container{
-    margin-top: 12px;
-}
+    width: 200px;
+  }
+
+.profile-title{
+    width: 80px;
+    font-weight: 600;
+    font-size: 18px;
+  }

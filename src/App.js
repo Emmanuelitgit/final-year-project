@@ -3,25 +3,25 @@ import "../src/Componets/Style/style.css"
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import AdminNavs from "./Componets/Navs/AdminNavs"
 import Login from "./Pages/Login/Login";
-import AdminDashboard from "./Pages/Admin/AdminDashboard"
+import AdminDashboard from "./Pages/Admin/Dashboard/AdminDashboard"
 import Register from "./Pages/Register/Register";
 import Payment from "./Componets/Payment/Payment"
 import PatientList from "./Componets/Patient/PatientList"
-import DoctorList from "./Pages/Admin/DoctorList"
-import DepartmentList from './Pages/Admin/DepartmentList';
-import NurseList from "./Pages/Admin/NurseList"
+import DoctorList from "./Pages/Admin/Doctor/DoctorList"
+import DepartmentList from './Pages/Admin/Department/DepartmentList';
+import NurseList from "./Pages/Admin/Nurse/NurseList"
 import AppointmentList from "./Componets/Appointment/AppointmentList"
-import AccountantList from "./Pages/Admin/AccountantList"
-import PharmacistList from "./Pages/Admin/PharmacistList"
-import LaboratoristList from "./Pages/Admin/LaboratoristList"
-import RadiographerList from "./Pages/Admin/RadiographerList"
+import AccountantList from "./Pages/Admin/Accountant/AccountantList"
+import PharmacistList from "./Pages/Admin/Pharmacist/PharmacistList"
+import LaboratoristList from "./Pages/Admin/Laboratorist/LaboratoristList"
+import RadiographerList from "./Pages/Admin/Radiographer.jsx/RadiographerList"
 import BedAllotmentList from "./Componets/BedWard/BedAllotmentList"
 import BirthReport from "./Componets/Report/BirthReport"
 import DeathReport from "./Componets/Report/DeathReport"
 import BloodBank from "./Componets/BloodBank/BloodBank"
 import BloodDonorList from "./Componets/BloodBank/BloodDonorList"
 import BedList from "./Componets/BedWard/BedList"
-import NoticeBoard from "./Pages/Admin/NoticeBoard"
+import NoticeBoard from "./Pages/Admin/Notice/NoticeBoard"
 import OperationReport from "./Componets/Report/OperationReport"
 import MedicineList from "./Componets/Medicine/MedicineList"
 import DoctorNavs from './Componets/Navs/DoctorNavs';
@@ -34,7 +34,7 @@ import NurseNavs from './Componets/Navs/NurseNavs';
 import InvoiceList from './Componets/Payment/Payment';
 import VitalList from './Componets/Vital/VitalList';
 import Profile from './Componets/Profile/Profile';
-
+import Settings from './Pages/Admin/Settings/Settings';
 
 const Admin =()=>{
  return(
@@ -100,10 +100,11 @@ const router = createBrowserRouter([
       { path: "/admin/death-report", element: <DeathReport /> },
       { path: "/admin/appointment-list", element: <AppointmentList /> },
       { path: "/admin/profile", element: <Profile /> },
+      { path: "/admin/settings", element: <Settings /> },
     ]
   },
 
-  // DOCTOR MODULE NAVOGATION HERE
+  // DOCTOR MODULE NAVIGATION HERE
   {  
     path: "/doctor",
     element: <Doctor/>,
@@ -134,7 +135,7 @@ const router = createBrowserRouter([
     ]
   },
 
-  // NURSE MODULE NAVOGATION HERE
+  // NURSE MODULE NAVIGATION HERE
   {  
     path: "/nurse",
     element: <Nurse/>,

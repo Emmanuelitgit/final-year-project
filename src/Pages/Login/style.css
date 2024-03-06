@@ -24,7 +24,7 @@ html{
     align-items: center;
     justify-content: center;
 }
-.input-container{
+.login-input-container{
 box-shadow: var(--box-shadow);
 background-color: white;
 height: 65vh;
@@ -53,7 +53,7 @@ border-radius: 10px;
     margin: 2%;
     border-radius: 3px;
 }
-.input{
+.login-input{
     padding: 10px;
     outline: none;
     border: none;

@@ -1,3 +1,26 @@
+import doctor from "../Componets/images/staff/doctor 1.png";
+import lab from "../Componets/images/staff/lab-tool.png";
+import pharmacist from "../Componets/images/staff/pharmacist 1.png";
+import nurse from "../Componets/images/staff/nurse 1.png";
+import accountant from "../Componets/images/staff/accountant 1.png";
+import radiographer from "../Componets/images/staff/radiologist 1.png";
+import patient from "../Componets/images/staff/patient 1.png";
+import appointment from "../Componets/images/staff/appointment.jpg";
+import blood from "../Componets/images/staff/blood-bank.avif";
+import book from "../Componets/images/staff/book.jpg";
+import birth from "../Componets/images/staff/birth 1.jpg";
+import drug from "../Componets/images/staff/drug.jpg";
+import medicine from "../Componets/images/staff/drug.jpg";
+import death from "../Componets/images/staff/death.png";
+import operation from "../Componets/images/staff/operation 2.jpg";
+import allotment from "../Componets/images/staff/allotment.jpg";
+import bed from "../Componets/images/staff/bed.png";
+
+
+
+
+
+
 export const UserData = [
     {
       id: 1,
@@ -579,3 +602,207 @@ export const tableData = {
     }
   ]
 };
+
+export const adminBoxes = [
+  {
+  id:1,
+  name:"Doctor",
+  background:"#192a56",
+  image:doctor
+},
+{
+  id:2,
+  name:"Nurse",
+  background:"purple",
+  image:nurse
+},
+{
+  id:3,
+  name:"Patient",
+  background:"tomato",
+  image:patient
+},
+{
+  id:4,
+  name:"Pharmacist",
+  background:"crimson",
+  image:pharmacist
+},
+{
+  id:5,
+  name:"Laboratorist",
+  background:"#192a56",
+  image:lab
+},
+{
+  id:6,
+  name:"Accountant",
+  background:"brown",
+  image:accountant
+},
+{
+  id:7,
+  name:"Radiographer",
+  background:"teal",
+  image:radiographer
+},
+{
+  id:8,
+  name:"Appointment",
+  background:"steelblue",
+  image:appointment
+},
+{
+  id:9,
+  name:"Blood Bank",
+  background:"rebeccapurple",
+  image:blood
+},
+{
+  id:10,
+  name:"Medicine",
+  background:"slategrey",
+  image:medicine
+},
+{
+  id:11,
+  name:"Operation Report",
+  background:"#FA6775",
+  image:operation
+},
+{
+  id:12,
+  name:"Birth Report",
+  background:"sienna",
+  image:birth
+},
+{
+  id:13,
+  name:"Death Report",
+  background:"rosybrown",
+  image:death
+},
+{
+  id:14,
+  name:"Bed Allotment",
+  background:"#666",
+  image:allotment
+},
+{
+  id:15,
+  name:"Notice Board",
+  background:"cornflowerblue",
+  image:book
+}
+
+]
+
+
+export const doctorBoxes = [
+  {
+    id:6,
+    name:"Patient",
+    background:"steelblue",
+    image:patient
+  },
+{
+  id:7,
+  name:"Appointment",
+  background:"steelblue",
+  image:appointment
+},
+{
+  id:8,
+  name:"Prescription",
+  background:"steelblue",
+  image:medicine
+},
+{
+  id:9,
+  name:"Blood Bank",
+  background:"rebeccapurple",
+  image:blood
+},
+{
+  id:11,
+  name:"Operation Report",
+  background:"#FA6775",
+  image:operation
+},
+{
+  id:12,
+  name:"Birth Report",
+  background:"sienna",
+  image:birth
+},
+{
+  id:13,
+  name:"Death Report",
+  background:"rosybrown",
+  image:death
+},
+{
+  id:14,
+  name:"Bed Allotment",
+  background:"#666",
+  image:allotment
+},
+{
+  id:15,
+  name:"Notice Board",
+  background:"cornflowerblue",
+  image:book
+}
+
+]
+
+export const nurseBoxes = [
+  {
+    id:6,
+    name:"Patient",
+    background:"steelblue",
+    image:patient
+  },
+{
+  id:7,
+  name:"Appointment",
+  background:"steelblue",
+  image:appointment
+},
+{
+  id:9,
+  name:"Blood Bank",
+  background:"rebeccapurple",
+  image:blood
+},
+{
+  id:11,
+  name:"Operation Report",
+  background:"#FA6775",
+  image:operation
+},
+{
+  id:12,
+  name:"Birth Report",
+  background:"sienna",
+  image:birth
+},
+{
+  id:13,
+  name:"Death Report",
+  background:"rosybrown",
+  image:death
+},
+{
+  id:14,
+  name:"Bed Allotment",
+  background:"#666",
+  image:allotment
+},
+{
+  id:15,
+  name:"Notice Board",
+  background:"cornflowerblue",
+  image:book
+}
+]

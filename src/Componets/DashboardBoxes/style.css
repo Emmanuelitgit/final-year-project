@@ -31,9 +31,29 @@ html{
     justify-content: center;
     flex-direction: column;
     background-color: #1ECC4F;
-    margin: 10px;
-    width: 140px;
-    height: 10vh;
+    box-shadow: var(--box-shadow);
+    border-radius: 3px;
+    gap: 6px;
+    margin: 12px;
+    width: 165px;
+    height: 12vh;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.boxes-container{
+    display: flex;
+    align-items: center;
+}
+.box-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.box-img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
 }
 .role-name,.role-value{
     color: white;
@@ -46,7 +66,7 @@ html{
 .horizontal-line{
     background-color: var(--black);
     height: 3px;
-    width: 95%;
+    width: 98%;
 }
 .footer-text-container{
     margin-left: 25%;

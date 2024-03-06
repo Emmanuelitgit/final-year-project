@@ -71,7 +71,7 @@ const Login = () => {
 
   return (
     <div className='login-container'>
-      <div className="input-container">
+      <div className="login-input-container">
         <div className='panel-bar'>
           <h3 className='panel-title-text'>Login Panel</h3>
         </div>
@@ -90,7 +90,7 @@ const Login = () => {
         <div className="input-field">
           <Mail/>
           <input type="email" 
-          className='input' 
+          className='login-input' 
           placeholder='Email Address' 
           name="email"
           onChange={handleChange}
