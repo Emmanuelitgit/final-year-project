@@ -11,8 +11,8 @@ const DoctorList = () => {
 
   const dispatch = useDispatch();
   const location = useLocation();
-  const role = location.pathname.split("/")[2];
-
+  const role = location.pathname.split("/")[2].replace("-list", "");
+  
   const [data, setData] = useState({ columns: [], rows: [] });
   const staffData = useSelector(state => state.data?.staff) || []; 
 

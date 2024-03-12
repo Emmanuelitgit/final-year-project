@@ -5,6 +5,7 @@ import { Folder, Delete, Update, Add } from '@mui/icons-material';
 import Button from '../Buttons/Button';
 import { tableData } from '../../utils/Data';
 import AddPatient from './AddPatient';
+import ManagePatient from './ManagePatient';
 
 
 const PatientList = ({ admin }) => {
@@ -43,7 +44,13 @@ const PatientList = ({ admin }) => {
                       email: 25,
                       username: item.username,
                       actions: (
-                          <Button />
+                          <ManagePatient
+                          name={"Patient"}
+                          id={item.id}
+                          patient={item.name}
+                          age={25}
+                          sex={item.username}
+                           />
                       )
                   })),
               };

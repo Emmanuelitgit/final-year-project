@@ -4,7 +4,8 @@ import { MDBDataTable } from 'mdbreact';
 import { Folder, Delete, Update, Add } from '@mui/icons-material';
 import Button from '../Buttons/Button';
 import { tableData } from '../../utils/Data';
-
+import AddDonor from './AddDonor';
+import ManageDonor from './ManageDonor';
 
 
 const BloodDonorList = ({ admin }) => {
@@ -30,7 +31,9 @@ const BloodDonorList = ({ admin }) => {
               ];
               if (role === "Nurse") {
                   columns.push({ label: 'Actions', field: 'actions', sort: 'disabled' });
-              }
+              }else if (role === "Laboratorist") {
+                columns.push({ label: 'Actions', field: 'actions', sort: 'disabled' });
+            }
 
               const transformedData = {
                   columns: columns,
@@ -40,7 +43,10 @@ const BloodDonorList = ({ admin }) => {
                       email: item.address.geo.lng,
                       username: item.username,
                       actions: (
-                          <Button />
+                          <ManageDonor
+                            name={"Donor"}
+                            id={item.id}
+                            />
                       )
                   })),
               };
@@ -58,7 +64,12 @@ const BloodDonorList = ({ admin }) => {
       <div className='main-border'>
           {role === "Nurse"  &&
               <div className='add-btn-container'>
-                  <button className='add-btn'><Add />Add Blood Donor</button>
+                  <AddDonor/>
+              </div>
+          }
+          {role === "Laboratorist"  &&
+              <div className='add-btn-container'>
+                  <AddDonor/>
               </div>
           }
           <MDBDataTable

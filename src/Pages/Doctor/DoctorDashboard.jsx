@@ -1,6 +1,5 @@
 import React from 'react';
 import DashboardBoxes from '../../Componets/DashboardBoxes/DashboardBoxes';
-import Charts from "../../Componets/Charts/Charts";
 
 
 const DoctorDashboard = () => {

@@ -13,9 +13,11 @@ import { Dashboard,
         PersonAdd,
         Healing } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import LogoutBtn from '../Buttons/LogoutBtn';
 
 
 const DoctorSidebar = () => {
+
   return (
     <div className='sidebar-container'>
       <div className='sidebar-items-container'>
@@ -26,13 +28,13 @@ const DoctorSidebar = () => {
           </Link>
         </div>
         <div className='item'>
-          <Link to={"/doctor/patient"}>
+          <Link to={"/doctor/patient-list"}>
           <PersonAdd className='sidebar-icon'/>
           <span className='item-name'>Patient</span>
           </Link>
         </div>
         <div className='item'>
-          <Link to={"/doctor/appointment"}>
+          <Link to={"/doctor/appointment-list"}>
           <Healing className='sidebar-icon'/>
           <span className='item-name'>Manage Appointment</span>
           </Link>
@@ -92,10 +94,7 @@ const DoctorSidebar = () => {
           </Link>
         </div>
       </div>
-      <div className='logout-container'>
-        <Logout className='sidebar-icon'/>
-        <span className='logout'>Logout</span>
-      </div>
+      <LogoutBtn/>
     </div>
   )
 }

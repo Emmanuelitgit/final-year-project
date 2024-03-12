@@ -1,12 +1,19 @@
 import React from 'react'
 import "./style.css";
+import { useLocation } from "react-router-dom";
+
 
 const Panelbar = () => {
+  const location = useLocation();
+  const route = location.pathname.split("/")[2];
+ 
+  const newRoute = route?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
   return (
     <div className='panel-main-container'>
     <div className='panel-container'>
         <div className='panel-type-container'>
-            <h4 className='panel-type-name'>Dashboard</h4>
+            <h3 className='panel-type-name'>{newRoute}</h3>
         </div>
         <div className='panels-container'>
             <div className='panel-name-container'>

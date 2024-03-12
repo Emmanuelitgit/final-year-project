@@ -5,7 +5,7 @@ import { Folder, Delete, Update, Add } from '@mui/icons-material';
 import Button from '../Buttons/Button';
 import { tableData } from '../../utils/Data';
 
-const PatientList = () => {
+const PaymentList = () => {
     const [data, setData] = useState({ columns: [], rows: [] });
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const PatientList = () => {
   
           const transformedData = {
             columns: [
-              { label: 'ID', field: 'id', sort: 'asc',  },
+              { label: 'Payment ID', field: 'id', sort: 'asc',  },
               { label: 'Date', field: 'name', sort: 'asc' },
               { label: 'Amount', field: 'email', sort: 'asc' },
               { label: 'Payment Type', field: 'username', sort: 'asc' },
@@ -63,4 +63,4 @@ const PatientList = () => {
   );
 }
 
-export default PatientList;
+export default PaymentList;

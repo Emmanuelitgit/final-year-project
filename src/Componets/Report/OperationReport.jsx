@@ -4,7 +4,8 @@ import { MDBDataTable } from 'mdbreact';
 import { Folder, Delete, Update, Add } from '@mui/icons-material';
 import Button from '../Buttons/Button';
 import { tableData } from '../../utils/Data';
-
+import AddReport from './AddReport';
+import ManageReport from './ManageReport';
 
 
 const OperationReport = ({ admin }) => {
@@ -42,7 +43,10 @@ const OperationReport = ({ admin }) => {
                       email: item.address.geo.lng,
                       username: item.username,
                       actions: (
-                          <Button />
+                          <ManageReport
+                           name={"Operation"}
+                           id={item.id}
+                           />
                       )
                   })),
               };
@@ -60,12 +64,16 @@ const OperationReport = ({ admin }) => {
       <div className='main-border'>
           {role === "Doctor"  &&
               <div className='add-btn-container'>
-                  <button className='add-btn'><Add />Add Report</button>
+                  <AddReport
+                    name={"Operation"}
+                  />
               </div>
           }
            {role === "Nurse"  &&
               <div className='add-btn-container'>
-                  <button className='add-btn'><Add />Add Report</button>
+                  <AddReport
+                    name={"Operation"}
+                  />
               </div>
           }
           <MDBDataTable

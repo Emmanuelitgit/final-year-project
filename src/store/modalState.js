@@ -5,13 +5,13 @@ import axios from "axios";
 export const modalSlice = createSlice({
     name:"modal",
     initialState:{
-        updateModal:false
+        resultModal:false
     },
     reducers:{
-        handleUpdateModal:(state)=>{
-            state.updateModal = !state.updateModal
+        handleResultModal:(state)=>{
+            state.resultModal = !state.resultModal
         }
     }
 })
 
-export const modalActions = modalSlice.actions;
+export const {handleResultModal} = modalSlice.actions;

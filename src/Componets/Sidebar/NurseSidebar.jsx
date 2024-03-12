@@ -13,9 +13,11 @@ import { Dashboard,
         PersonAdd,
         Healing } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import LogoutBtn from '../Buttons/LogoutBtn';
 
 
 const NurseSidebar = () => {
+
   return (
     <div className='sidebar-container'>
       <div className='sidebar-items-container'>
@@ -26,7 +28,7 @@ const NurseSidebar = () => {
           </Link>
         </div>
         <div className='item'>
-          <Link to={"/nurse/patient"}>
+          <Link to={"/nurse/patient-list"}>
           <PersonAdd className='sidebar-icon'/>
           <span className='item-name'>Manage Patient</span>
           </Link>
@@ -38,7 +40,7 @@ const NurseSidebar = () => {
           </Link>
         </div>
         <div className='item'>
-          <Link to={"/nurse/appointment"}>
+          <Link to={"/nurse/appointment-list"}>
           <Healing className='sidebar-icon'/>
           <span className='item-name'>Manage Appointment</span>
           </Link>
@@ -52,7 +54,7 @@ const NurseSidebar = () => {
         <div className='item'>
           <Link to={"/nurse/bed-list"}>
           <PeopleAlt className='sidebar-icon'/>
-          <span className='item-name'>View Bed List</span>
+          <span className='item-name'>Manage Bed</span>
           </Link>
         </div>
         <div className='item'>
@@ -92,10 +94,7 @@ const NurseSidebar = () => {
          </Link>
         </div>
       </div>
-      <div className='logout-container'>
-        <Logout className='sidebar-icon'/>
-        <span className='logout'>Logout</span>
-      </div>
+      <LogoutBtn/>
     </div>
   )
 }

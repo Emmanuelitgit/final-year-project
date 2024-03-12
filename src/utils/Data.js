@@ -806,3 +806,118 @@ export const nurseBoxes = [
   image:book
 }
 ]
+
+export const pharmacistBoxes = [
+  {
+    id:6,
+    name:"Medicine Category",
+    background:"steelblue",
+    image:patient
+  },
+{
+  id:7,
+  name:"Manage Medicine",
+  background:"#FA6775",
+  image:appointment
+},
+{
+  id:9,
+  name:"Provide Medication",
+  background:"rebeccapurple",
+  image:blood
+},
+]
+
+export const LaboratoristBoxes = [
+  {
+    id:6,
+    name:"Add Diagnosis Report",
+    background:"steelblue",
+    image:patient
+  },
+{
+  id:7,
+  name:"Manage Blood Bank",
+  background:"#FA6775",
+  image:appointment
+},
+{
+  id:9,
+  name:"Manage Blood Donor",
+  background:"rebeccapurple",
+  image:blood
+},
+]
+
+export const accountantBoxes = [
+  {
+    id:6,
+    name:"Invoice/Take Payment",
+    background:"steelblue",
+    image:patient
+  },
+{
+  id:7,
+  name:"View Payment",
+  background:"#FA6775",
+  image:appointment
+},
+]
+
+export const radiographerBoxes = [
+  {
+    id:6,
+    name:"Add Diagnosis Report",
+    background:"steelblue",
+    image:patient
+  },
+{
+  id:7,
+  name:"View Reports",
+  background:"#FA6775",
+  image:appointment
+},
+]
+
+export const paymentStatus = [
+  {
+    id:6,
+    value:"Paid"
+  },
+{
+  id:7,
+  value:"Unpaid"
+},
+{
+  id:8,
+  value:"Paid"
+},
+{
+id:9,
+value:"Unpaid"
+},
+{
+  id:10,
+  value:"Paid"
+},
+{
+id:10,
+value:"Unpaid"
+},
+{
+  id:11,
+  value:"Paid"
+},
+{
+id:12,
+value:"Unpaid"
+},
+{
+  id:13,
+  value:"Paid"
+},
+{
+id:14,
+value:"Unpaid"
+},
+]

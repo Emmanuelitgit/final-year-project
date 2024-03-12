@@ -64,3 +64,17 @@ html{
     border: none;
     outline: none;
   }
+  .payment-status-btn{
+    padding: 6px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-left: 4%;
+    cursor: pointer;
+    text-align: center;
+  }
+  .payment-status-btn:focus{
+    border: none;
+    outline: none;
+  }

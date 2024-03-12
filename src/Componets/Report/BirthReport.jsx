@@ -1,13 +1,13 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { MDBDataTable } from 'mdbreact';
-import { Folder, Delete, Update, Add } from '@mui/icons-material';
+import { Folder, Delete, Update, Add, Man } from '@mui/icons-material';
 import Button from '../Buttons/Button';
 import { tableData } from '../../utils/Data';
+import AddReport from './AddReport';
+import ManageReport from './ManageReport';
 
-
-
-const BirthReport = ({ admin }) => {
+const BirthReport = () => {
   const role = localStorage.getItem("role");
   const [data, setData] = useState({ columns: [], rows: [] });
 
@@ -41,7 +41,10 @@ const BirthReport = ({ admin }) => {
                       email: item.address.geo.lng,
                       username: item.username,
                       actions: (
-                          <Button />
+                          <ManageReport
+                            name={"Birth"}
+                            id={item.id}
+                           />
                       )
                   })),
               };
@@ -59,12 +62,16 @@ const BirthReport = ({ admin }) => {
       <div className='main-border'>
           {role === "Doctor"  &&
               <div className='add-btn-container'>
-                  <button className='add-btn'><Add />Add Report</button>
+                  <AddReport
+                  name={"Birth"}
+                  />
               </div>
           }
            {role === "Nurse"  &&
               <div className='add-btn-container'>
-                  <button className='add-btn'><Add />Add Report</button>
+                   <AddReport
+                   name={"Birth"}
+                  />
               </div>
           }
           <MDBDataTable

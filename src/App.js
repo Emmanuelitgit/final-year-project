@@ -31,10 +31,21 @@ import RequestList from './Componets/Labs/RequestList';
 import ResultList from './Componets/Labs/ResultList';
 import NurseDashboard from './Pages/Nurse/NurseDashboard';
 import NurseNavs from './Componets/Navs/NurseNavs';
-import InvoiceList from './Componets/Payment/Payment';
+import InvoiceList from './Componets/Payment/InvoiceList';
 import VitalList from './Componets/Vital/VitalList';
 import Profile from './Componets/Profile/Profile';
 import Settings from './Pages/Admin/Settings/Settings';
+import PharmacistNavs from './Componets/Navs/PharmacistNavs';
+import PharmacistDashboard from './Pages/Pharmacist/PharmacistDashboard';
+import MedicineCategory from './Componets/Medicine/MedicineCategory';
+import LaboratoristNavs from './Componets/Navs/LaboratoristNavs';
+import AccountantNavs from './Componets/Navs/AccountantNavs';
+import AccountantDashboard from './Pages/Accountant/AccountantDashboard';
+import RadiographerNavs from './Componets/Navs/RadiographerNavs';
+import RadiographerDashboard from './Pages/Radiographer/RadiographerDashboard';
+import ScanRequestList from './Componets/Scan/ScanRequestList';
+import ScanReport from "./Componets/Scan/ScanReport"
+
 
 const Admin =()=>{
  return(
@@ -63,10 +74,37 @@ const Doctor =()=>{
   )
  }
 
+ const Pharmacist =()=>{
+  return(
+   <> 
+   <PharmacistNavs/>
+   <Outlet/>
+   </>
+  )
+ }
+
+ const Laboratorist =()=>{
+  return(
+   <> 
+   <LaboratoristNavs/>
+   <Outlet/>
+   </>
+  )
+ }
+
+ const Radiographer =()=>{
+  return(
+   <> 
+   <RadiographerNavs/>
+   <Outlet/>
+   </>
+  )
+ }
+
  const Accountant =()=>{
   return(
    <> 
-   <NurseNavs/>
+   <AccountantNavs/>
    <Outlet/>
    </>
   )
@@ -80,15 +118,15 @@ const router = createBrowserRouter([
     element: <Admin/>,
     children: [
       { path: "/admin/dashboard", element: <AdminDashboard /> },
-      { path: "/admin/department", element: <DepartmentList /> },
-      { path: "/admin/doctor", element: <DoctorList /> },
-      { path: "/admin/payment", element: <Payment /> },
-      { path: "/admin/patient", element: <PatientList /> },
-      { path: "/admin/nurse", element: <NurseList /> },
-      { path: "/admin/pharmacist", element: <PharmacistList /> },
-      { path: "/admin/laboratorist", element: <LaboratoristList /> },
-      { path: "/admin/radiographer", element: <RadiographerList /> },
-      { path: "/admin/accountant", element: <AccountantList /> },
+      { path: "/admin/department-list", element: <DepartmentList /> },
+      { path: "/admin/doctor-list", element: <DoctorList /> },
+      { path: "/admin/payment-list", element: <Payment /> },
+      { path: "/admin/patient-list", element: <PatientList /> },
+      { path: "/admin/nurse-list", element: <NurseList /> },
+      { path: "/admin/pharmacist-list", element: <PharmacistList /> },
+      { path: "/admin/laboratorist-list", element: <LaboratoristList /> },
+      { path: "/admin/radiographer-list", element: <RadiographerList /> },
+      { path: "/admin/accountant-list", element: <AccountantList /> },
       { path: "/admin/operation-report", element: <OperationReport /> },
       { path: "/admin/medicine-list", element: <MedicineList /> },
       { path: "/admin/bed-list", element: <BedList /> },
@@ -110,9 +148,9 @@ const router = createBrowserRouter([
     element: <Doctor/>,
     children:[
       {path: "/doctor/dashboard",element: <DoctorDashboard/>},
-      {path: "/doctor/patient",element: <PatientList/>},
+      {path: "/doctor/patient-list",element: <PatientList/>},
       {path: "/doctor/prescription-list",element: <PrescriptionList/>},
-      {path: "/doctor/appointment",element: <AppointmentList/>},
+      {path: "/doctor/appointment-list",element: <AppointmentList/>},
       { path: "/doctor/bed-allotment-list", element: <BedAllotmentList /> },
       { path: "/doctor/bed-list", element: <BedList /> },
       { path: "/doctor/blood-bank", element: <BloodBank /> },
@@ -126,23 +164,14 @@ const router = createBrowserRouter([
     ]
   },
 
-  {  
-    path: "/accountant",
-    element: <Accountant/>,
-    children:[
-      {path: "/accountant/dashboard",element: <DoctorDashboard/>},
-      {path: "/accountant/payment-list",element: <Payment/>},
-    ]
-  },
-
   // NURSE MODULE NAVIGATION HERE
   {  
     path: "/nurse",
     element: <Nurse/>,
     children:[
       {path: "/nurse/dashboard",element: <NurseDashboard/>},
-      {path: "/nurse/patient",element: <PatientList/>},
-      {path: "/nurse/appointment",element: <AppointmentList/>},
+      {path: "/nurse/patient-list",element: <PatientList/>},
+      {path: "/nurse/appointment-list",element: <AppointmentList/>},
       { path: "/nurse/bed-allotment-list", element: <BedAllotmentList /> },
       { path: "/nurse/bed-list", element: <BedList /> },
       { path: "/nurse/blood-bank", element: <BloodBank /> },
@@ -152,6 +181,55 @@ const router = createBrowserRouter([
       { path: "/nurse/operation-report", element: <OperationReport /> },
       { path: "/nurse/vital-list", element: <VitalList /> },
       { path: "/nurse/profile", element: <Profile /> },
+    ]
+  },
+
+  // PHARMACIST MODULE NAVIGATION HERE
+  {  
+    path: "/pharmacist",
+    element: <Pharmacist/>,
+    children:[
+      {path: "/pharmacist/dashboard",element: <PharmacistDashboard/>},
+      {path: "/pharmacist/medicine-list",element: <MedicineList/>},
+      {path: "/pharmacist/prescription-list",element: <PrescriptionList/>},
+      {path: "/pharmacist/medicine-category",element: <MedicineCategory/>},
+      { path: "/pharmacist/profile", element: <Profile /> },
+    ]
+  },
+
+    // LABORATORIST MODULE NAVIGATION HERE
+    {  
+      path: "/laboratorist",
+      element: <Laboratorist/>,
+      children:[
+        {path: "/laboratorist/dashboard",element: <PharmacistDashboard/>},
+        {path: "/laboratorist/blood-bank",element: <BloodBank/>},
+        {path: "/laboratorist/blood-donor",element: <BloodDonorList/>},
+        {path: "/laboratorist/request-list",element: <RequestList/>},
+        { path: "/laboratorist/profile", element: <Profile /> },
+      ]
+    },
+
+        // RADIOGRAPHER MODULE NAVIGATION HERE
+        {  
+          path: "/radiographer",
+          element: <Radiographer/>,
+          children:[
+            {path: "/radiographer/dashboard",element: <RadiographerDashboard/>},
+            {path: "/radiographer/request-list",element: <ScanRequestList/>},
+            {path: "/radiographer/scan-reports",element: <ScanReport/>},
+          ]
+        },
+
+   // ACCOUNTANT MODULE NAVIGATION HERE
+  {  
+    path: "/accountant",
+    element: <Accountant/>,
+    children:[
+      {path: "/accountant/dashboard",element: <AccountantDashboard/>},
+      {path: "/accountant/payment-list",element: <Payment/>},
+      {path: "/accountant/invoice-list",element: <InvoiceList/>},
+      { path: "/accountant/profile", element: <Profile /> },
     ]
   },
 

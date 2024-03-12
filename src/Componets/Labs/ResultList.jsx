@@ -4,10 +4,14 @@ import { MDBDataTable } from 'mdbreact';
 import { Folder, Delete, Update, Add } from '@mui/icons-material';
 import Button from '../Buttons/Button';
 import { tableData } from '../../utils/Data';
-
+import AddResult from './AddResult';
+import ManageResult from './ManageResult';
 
 
 const ResultList = ({admin}) => {
+
+  const role = localStorage.getItem("role");
+
     const [data, setData] = useState({ columns: [], rows: [] });
 
     useEffect(() => {
@@ -27,7 +31,7 @@ const ResultList = ({admin}) => {
               { label: 'Patient', field: 'username', sort: 'asc' },
               { label: 'Type', field: 'username', sort: 'asc' },
               { label: 'Test Name', field: 'username', sort: 'asc' },
-              ...(admin ? [{ label: 'Actions', field: 'actions', sort: 'disabled' }] : [])
+              ...(role === "Laboratorist" ? [{ label: 'Actions', field: 'actions', sort: 'disabled' }] : [])
             ],
          
             rows: fetchedData.map(item => ({
@@ -37,7 +41,10 @@ const ResultList = ({admin}) => {
               username: item.username,
               actions:(
                 <>
-                <Button/>
+                <ManageResult
+                 name={"Result"}
+                 id={item.id}
+                />
                 </>
               )
             })),
@@ -53,9 +60,11 @@ const ResultList = ({admin}) => {
     }, []);
   return (
     <div className='main-border'>
+        {role === "Laboratorist" && 
         <div className='add-btn-container'>
-            <button className='add-btn'><Add/>Add Result</button>
+          <AddResult/>
         </div>
+        }
        <MDBDataTable
         striped
         bordered
