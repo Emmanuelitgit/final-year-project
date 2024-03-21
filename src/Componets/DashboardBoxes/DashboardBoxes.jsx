@@ -7,6 +7,7 @@ import { nurseBoxes } from '../../utils/Data';
 import { pharmacistBoxes } from '../../utils/Data';
 import { LaboratoristBoxes } from '../../utils/Data';
 import { radiographerBoxes } from '../../utils/Data';
+import Calender from '../Calender/Calender';
 
 
 const DashboardBoxes = () => {
@@ -96,6 +97,9 @@ const DashboardBoxes = () => {
         <div className="footer-text-container">
         {/* <span className='footer-text'>@2024 Clinic Management System. Developed by Emmanuel Yidana</span> */}
         </div>
+       {role !== "Admin" &&
+          <Calender/>
+       }
     </div>
   )
 }

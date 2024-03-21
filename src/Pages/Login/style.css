@@ -15,27 +15,31 @@
     border: none;
     transition: all .2s linear;
 }
+
 html{
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
+
 .login-container{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .login-input-container{
 box-shadow: var(--box-shadow);
 background-color: white;
-height: 65vh;
-width: 55.3%;
+height: 80vh;
+width: 67%;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-margin-top: 130px;
+margin-top: 90px;
 border-radius: 10px;
 }
+
 .dropdown-input{
     display: flex;
     align-items: center;
@@ -44,61 +48,89 @@ border-radius: 10px;
     margin: 2%;
     border-radius: 3px;
 }
+
+.dropdown:hover{
+    border-color: blueviolet;
+}
+
 .input-field{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 45%;
-    border: 1px solid black;
+    border: 1px solid gray;
     margin: 2%;
     border-radius: 3px;
 }
+
+.input-field:hover{
+    border-color: blueviolet;
+}
+
+.input-field:focus-within{
+    border-color: blueviolet;
+    outline: 0;
+    box-shadow: 0 0 0 1.5px #2563EB;
+}
+
 .login-input{
-    padding: 10px;
+    padding: 13px;
     outline: none;
     border: none;
     width: 275px;
 }
+
 .button-container{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
 }
+
 .button{
-    padding: 10px;
+    padding: 12px;
     outline: none;
     border: none;
-    width: 275px;
+    width: 340px;
     border-radius: 3px;
     background-color: var(--black);
     color: white;
     cursor: pointer;
 }
+
 .panel-bar{
     background-color: var(--black);
-    height: 37px;
-    width: 45%;
+    height: 45px;
+    width: 54.6%;
     position: absolute;
-    top: 20%;
+    top: 13%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .panel-title-text{
     text-align: center;
     color: white;
 }
+
 .copyright{
     position: absolute;
     top: 77%;
     font-size: 11px;
 }
+
 .dropdown-container{
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
+
 .dropdown{
     padding: 10px;
 }
+/* .border{
+    border: 2px solid black;
+    height: 42px;
+    margin-left: 10px;
+} */

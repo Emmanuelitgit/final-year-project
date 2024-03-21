@@ -12,6 +12,7 @@ export const authSlice = createSlice({
         logout:()=>{
             localStorage.removeItem("user")
             localStorage.removeItem("role")
+            localStorage.removeItem("token")
         }
     }
 })

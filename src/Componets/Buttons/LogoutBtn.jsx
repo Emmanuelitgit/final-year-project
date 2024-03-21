@@ -1,16 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../store/auth';
 import { Logout } from '@mui/icons-material';
+import { Link, useNavigate } from "react-router-dom"
+
 
 const LogoutBtn = ({visible}) => {
 
-  console.log(visible)
+  const navigate = useNavigate()
+
   const dispatch = useDispatch();
 
    const handleLogout = () =>{
-    dispatch(logout())
+    dispatch(logout());
+    navigate("/login")
   }
 
   return (

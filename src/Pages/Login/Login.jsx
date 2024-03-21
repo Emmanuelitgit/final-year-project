@@ -39,7 +39,7 @@ const Login = () => {
       if (response.status === 200) {
         const { role } = response.data.data[0]; 
         const {name} = response.data.data[0];
-        const {token} = response.data.token;
+        const {token} = response.data;
 
         localStorage.setItem("role", role);
         localStorage.setItem("user", name);
@@ -82,25 +82,26 @@ const Login = () => {
             selection
             search
             options={friendOptions}
-            style={{ border:'1px solid black' }}
+            style={{ border:'1px solid gray', padding:"13px" }}
             name="role"
             onChange={handleChange} 
           />
         </div>
         <div className="input-field">
-          <Mail/>
+          {/* <Mail/> <span className='border'></span> */}
           <input type="email" 
           className='login-input' 
           placeholder='Email Address' 
           name="email"
           onChange={handleChange}
           autoComplete="true"
+          style={{marginRight:"35px"}}
           />
         </div>
         <div className="input-field">
-          <Lock/>
+          {/* <Lock/> */}
           <input type="password" 
-          className='input' 
+          className='login-input' 
           placeholder='Password'
           name="password"
           onChange={handleChange}

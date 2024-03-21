@@ -26,7 +26,7 @@ const PatientList = ({ admin }) => {
                   { label: 'Patient Name', field: 'name', sort: 'asc' },
                   { label: 'Age', field: 'email', sort: 'asc' },
                   { label: 'Sex', field: 'username', sort: 'asc' },
-                  { label: 'Blood Group', field: 'username', sort: 'asc' },
+                //   { label: 'Blood Group', field: 'username', sort: 'asc' },
                   { label: 'Birth Date', field: 'username', sort: 'asc' },
                   { label: 'Phone', field: 'username', sort: 'asc' },
               ];
